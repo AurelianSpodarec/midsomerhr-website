@@ -24,6 +24,7 @@ function Home() {
     <div>
 
       <SectionHero />
+      <SectionTestimonials />
       <SectionPricing />
       <SectionFAQ />
       <SectionFooterCTA />

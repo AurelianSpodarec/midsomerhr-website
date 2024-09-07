@@ -87,7 +87,7 @@ function MenuDesktop() {
           </div>
         </div>
       </div>
-      <button className="hidden lg:flex nav-cta bg-[#131313] rounded-lg border py-3 px-4 text-white">Schedule a call</button>
+      <button className="hidden lg:flex nav-cta bg-[#131313] rounded-lg border py-3 px-4 text-white">Schedule a FREE call</button>
     </nav>
   )
 }

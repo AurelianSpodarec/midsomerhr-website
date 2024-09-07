@@ -3,117 +3,151 @@ import Section from "@/components/_layout/Section";
 
 const dataPricing = [
   {
-    highlight: false,
-    name: "One-off Landing page",
-    description: "Ideal for businesses aiming to launch a high-impact, conversion-focused landing page.",
-    price: 2900,
-    subtitle: "Launch your site in 5days",
-    services: [
+    "highlight": false,
+    "name": "HR Pay-As-You-Go",
+    "description": "Ideal for businesses needing expert help with one-off HR projects or flexible support.",
+    "price": 97,
+    "subtitle": "Starting at: £97",
+    "services": [
       {
-        name: "Branding",
-        highlighted: false
+        "name": "Introducing Flexible Working",
+        "highlighted": false
       },
       {
-        name: "Copywriting",
-        highlighted: false
+        "name": "Redundancies or Restructures",
+        "highlighted": false
       },
       {
-        name: "Creative Strategy",
-        highlighted: false
+        "name": "Implementing HR Information or Appraisal Systems",
+        "highlighted": false
       },
       {
-        name: "Development",
-        highlighted: true
+        "name": "Employee Engagement Surveys",
+        "highlighted": false
       },
       {
-        name: "Slack channel & Trello board",
-        highlighted: false
+        "name": "Developing Performance Systems",
+        "highlighted": false
       },
       {
-        name: "Theming",
-        highlighted: false
+        "name": "New Employee Onboarding",
+        "highlighted": false
       },
       {
-        name: "Custom Graphics / Illustration",
-        highlighted: false
-      }
-    ]
-  },
-  {
-    highlight: true,
-    name: "Multi-Page",
-    description: "Perfect for complex offerings and a comprehensive online presence with SEO.",
-    price: 5700,
-    subtitle: "Launch your site in 5days",
-    services: [
-      {
-        name: "Branding",
-        highlighted: false
+        "name": "Developing a People Plan",
+        "highlighted": false
       },
       {
-        name: "Copywriting",
-        highlighted: false
+        "name": "Disciplinary and Grievance Issues",
+        "highlighted": false
       },
       {
-        name: "Creative Strategy",
-        highlighted: false
+        "name": "Performance Management",
+        "highlighted": false
       },
       {
-        name: "Development",
-        highlighted: true
+        "name": "Redundancy, Restructure, and Settlement Agreements",
+        "highlighted": false
       },
       {
-        name: "Slack channel & Trello board",
-        highlighted: false
+        "name": "Sickness Absence, AWOL, or Employee Wellbeing",
+        "highlighted": false
       },
       {
-        name: "Theming",
-        highlighted: false
+        "name": "Flexible and Hybrid Working",
+        "highlighted": false
       },
       {
-        name: "Custom Graphics / Illustration",
-        highlighted: false
+        "name": "Employee Engagement and Culture",
+        "highlighted": false
       }
     ]
   },
   {
     highlight: false,
-    name: "SaaS & Dashboard ⚡",
-    description: "Perfect for startups needing a strong foundation for their SaaS front-end - fast and efficiently.",
-    price: 10000,
-    subtitle: "Launch your site in 5days",
+    name: "HR Monthly Retainer",
+    description: "Perfect for businesses seeking ongoing HR support to manage and grow their teams effectively.",
+    price: 197,
+    priceOption: "m",
+    subtitle: "Starting at: £197",
     services: [
       {
-        name: "Branding",
+        name: "HR Software and Setup",
         highlighted: false
       },
       {
-        name: "Copywriting",
+        name: "Admin Support for HR System",
         highlighted: false
       },
       {
-        name: "Creative Strategy",
+        name: "Advice Helpline",
         highlighted: false
       },
       {
-        name: "Development",
-        highlighted: true
-      },
-      {
-        name: "Slack channel & Trello board",
+        name: "Email Support",
         highlighted: false
       },
       {
-        name: "Theming",
+        name: "Bespoke HR Letters",
         highlighted: false
       },
       {
-        name: "Custom Graphics / Illustration",
+        name: "Letter Templates",
+        highlighted: false
+      },
+      {
+        name: "Employment Law Updates",
+        highlighted: false
+      },
+      {
+        name: "Monthly Newsletter",
+        highlighted: false
+      },
+      {
+        name: "Quarterly People Strategy Meeting",
+        highlighted: false
+      },
+      {
+        name: "Bespoke People Plan Tailored to Your Business",
         highlighted: false
       }
     ]
-  }
-]
+  },
+  {
+    highlight: false,
+    name: "HR Consulting Package",
+    description: "Perfect for new businesses or those aiming to refine and enhance their HR systems.",
+    price: 597,
+    subtitle: "Starting at: £597",
+    services: [
+      {
+        name: "Contract of Employment",
+        highlighted: false
+      },
+      {
+        name: "Offer Letter",
+        highlighted: false
+      },
+      {
+        name: "Suite of Basic HR Policies",
+        highlighted: false
+      },
+      {
+        name: "Review of Current Documents",
+        highlighted: false
+      },
+      {
+        name: "Update & Fill Gaps in Policies",
+        highlighted: false
+      },
+      {
+        name: "Custom Templates & Documents Aligned with Your Culture & Values",
+        highlighted: false
+      }
+    ]
+  },
+];
+
 
 function PricingCard({ item }) {
   return (
@@ -131,8 +165,14 @@ function PricingCard({ item }) {
       <p>{item.description}</p>
 
       <div className="mt-2 mb-2">
-        <h1 className="text-5xl font-bold text-gray-900 font-playFair leading-none">{item.price.toLocaleString('en-GB', { style: 'currency', currency: 'GBP', minimumFractionDigits: 0, maximumFractionDigits: 0 })}</h1>
-        <p className="text-xs text-gray-500 mb-4">Launch your site in 5days</p>
+        <span className="text-xl text-gray-500">starting at</span>
+        <div>
+          <h1 className="text-6xl font-bold text-gray-900 font-playFair leading-none">
+            {item.price.toLocaleString('en-GB', { style: 'currency', currency: 'GBP', minimumFractionDigits: 0, maximumFractionDigits: 0 })}
+            <span className="text-lg">{item.priceOption ? "/m" : ""}</span>
+          </h1>
+        </div>
+        <p className="text-xs text-gray-500 mb-4">Contact us for a tailored quote based on your needs.</p>
       </div>
 
       <button className="text-white py-4 px-6 bg-black rounded-xl">

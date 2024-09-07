@@ -2,87 +2,32 @@ import Container from "@/components/_layout/Container"
 import Section from "@/components/_layout/Section"
 import AccordionBasic from "@/components/molecules/Accordion"
 
-// const dataObjections = [
-//   {
-//     question: "Why do we need an HR consultant when we already have an HR team?",
-//     response: "An HR consultant brings an outside perspective, offering specialized expertise and strategic guidance that complements your existing HR team. We help identify blind spots, implement best practices, and provide the extra support needed for complex challenges."
-//   },
-//   {
-//     question: "We’re a small business—can’t we handle HR on our own?",
-//     response: "Small businesses often lack the time and resources to stay on top of ever-changing HR laws and best practices. I provide tailored, cost-effective solutions that free up your time, allowing you to focus on growing your business while ensuring compliance and effective people management."
-//   },
-//   {
-//     question: "We can’t afford an HR consultant.",
-//     response: "Investing in an HR consultant can actually save you money in the long run by reducing turnover, avoiding costly compliance mistakes, and improving employee productivity. I offer flexible pricing options to fit your budget, ensuring you get the most value from our partnership."
-//   },
-//   {
-//     question: "We’re worried an outsider won’t understand our company culture.",
-//     response: "Understanding and preserving your company culture is a top priority. I take the time to immerse myself in your business, ensuring that any HR strategies we develop align with and enhance your existing culture, rather than disrupt it."
-//   },
-//   {
-//     question: "We need quick solutions, not long-term projects.",
-//     response: "I provide both immediate, actionable solutions and long-term strategies. Whether you need quick fixes or a comprehensive HR overhaul, I tailor my approach to meet your timelines and business needs."
-//   },
-//   {
-//     question: "HR consultants are only useful for big companies with complex needs.",
-//     response: "My services are designed specifically for small to mid-sized businesses. I offer scalable solutions that address your unique challenges, whether it's handling day-to-day HR tasks or tackling specific projects like recruitment, compliance, or employee engagement."
-//   },
-//   {
-//     question: "We’re not sure if an HR consultant can deliver real results.",
-//     response: "I measure success by tangible outcomes—reduced turnover, improved employee satisfaction, and compliance with employment laws. I provide regular updates and reports to ensure you see the value of our work together, every step of the way."
-//   }
-// ]
-
-// function SectionFAQ() {
-//   return (
-//     <Section>
-//       <Container>
-//         <h2>Questions? Answers</h2>
-
-//         {dataObjections.map((item, index) => (
-//           <div key={index} className="faq-item">
-//             <h3 className="faq-question">{item.question}</h3>
-//             <p className="faq-response">{item.response}</p>
-//           </div>
-//         ))}
-
-//       </Container>
-//     </Section>
-//   )
-// }
-
-// export default SectionFAQ
-
-
 const dataObjections = [
   {
-    question: "Who are you?",
-    answer: "I'm a developer turned designer with a passion for copywriting. I noticed a gap in the market where agencies overcharge for simple projects that I can single handeldy handle entirely on my own. And as you've seen what I do is pretty dman good - founders agree(link to go to testimonials - underline). Not only fast but for a good price. "
-    // Every website tends to look the same, so I developed a system that allows me to deliver high-quality work quickly and efficiently."
+    "question": "Who’s is behind MidsomerHR?",
+    "answer": "MidsomerHR is led by a dedicated consultant (me! Kristina) who genuinely cares about your business’s success. I bring years of corporate HR experience to small business owners, providing personalized HR solutions that align with your specific needs - no call centers, no faceless consultants, just hands-on support. :)"
   },
   {
-    question: "Why choose me over a freelancer, agency, or in-house developer?",
-    answer: `
-    Choosing the right partner—whether it's a designer, developer, copywriter, agency, or in-house developer—can be time-consuming and costly. Agencies often come with high fees and slow turnaround times, freelancers can be unreliable and inconsistent, and managing an in-house developer can be a hassle.
-
-    While it's possible to find quality work, it often costs businesses significant time, money, and lost opportunities—resources that could have been saved with a quicker, more streamlined process. With agencies, you can easily spend £5k on meetings alone before seeing a basic wireframe. Then, when they deliver a broken site, fixing it can cost you another £5k. With me, you won't have those problems.
-    `
+    "question": "What are the benefits of hiring an HR consultant?",
+    "answer": "Hiring an HR consultant offers you expert, flexible support without the cost of employing a full-time HR professional. I’m here to provide tailored advice, handle employee relations, and ensure your HR processes run smoothly, all while saving you time and resources."
   },
   {
-    question: "How will I communicate and work with you?",
-    answer: "I typically use Trello to manage projects, Notion (or a similar platform) for documentation, and Slack for communication. These tools help keep everything organized and ensure we're always on the same page."
+    "question": "Why choose an HR consultant over a full-time HR professional?",
+    "answer": "For businesses with up to 50 people, hiring a full-time HR professional can be expensive. An HR consultant like me offers the expertise you need at a fraction of the cost, allowing you to invest in what matters most - growing your business."
   },
   {
-    question: "How quickly will I receive my project?",
-    answer: "Most projects are completed within 48 hours or less. For more complex requests, the turnaround time might be slightly longer. Rest assured, I'll keep you informed every step of the way, so you always know what's going on."
+    "question": "How will an HR consultant understand my company’s unique needs?",
+    "answer": "I take the time to get to know you and your business. We’ll start with an initial call where I listen to your specific challenges and goals. From there, I create tailored solutions that fit your business perfectly - because no two businesses are the same."
   },
   {
-    question: "What if I'm unhappy with the result?",
-    answer: "This rarely happens, but if you're not satisfied, I offer unlimited revisions. I'll work on the project until you're 100% happy with the outcome."
+    "question": "What if the consultant's solutions don’t align with my business goals?",
+    "answer": "My goal is to partner with you, not just offer generic advice. If something doesn’t feel right, we’ll adjust the plan together. I’m committed to making sure my solutions help you achieve success and align with your business objectives."
   },
+  {
+    "question": "How will MidsomerHR help my business succeed?",
+    "answer": "The timeline depends on your specific needs, but many clients start seeing improvements within a few weeks of implementing the recommended changes. Whether it’s a new contract or a project, I’ll ensure you’re on track for success as quickly as possible."
+  }
 ]
-
-
 
 function SectionFAQ() {
   return (
@@ -92,7 +37,7 @@ function SectionFAQ() {
           <span className="text-2xl">FAQ</span>
           <h2 className="font-extrabold text-6xl font-playFair">Questions? Answers.</h2>
         </header>
-        <AccordionBasic type="multiple" data={dataObjections} />
+        <AccordionBasic type="single" data={dataObjections} />
       </Container>
     </Section>
   )
