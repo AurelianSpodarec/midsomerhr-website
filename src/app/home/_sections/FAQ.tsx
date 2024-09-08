@@ -5,7 +5,7 @@ import AccordionBasic from "@/components/molecules/Accordion"
 const dataObjections = [
   {
     "question": "Who’s is behind MidsomerHR?",
-    "answer": "MidsomerHR is led by a dedicated consultant (me! Kristina) who genuinely cares about your business’s success. I bring years of corporate HR experience to small business owners, providing personalized HR solutions that align with your specific needs - no call centers, no faceless consultants, just hands-on support. :)"
+    "answer": "MidsomerHR is led by a dedicated consultant (me! Kristina) who genuinely cares about your business’s success. With years of valuable corporate HR experience at companies like M&G plc, Royal London, New Look, Mitie Facilities Management, and Lloyds Banking Group, I offer personalized HR solutions tailored to your specific needs - no call centers, no faceless consultants, just hands-on support :)"
   },
   {
     "question": "What are the benefits of hiring an HR consultant?",

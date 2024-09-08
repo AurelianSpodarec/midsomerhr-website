@@ -22,7 +22,7 @@ function Header() {
   }, []);
 
   return (
-    <header className="z-40 relative">
+    <header className="z-40 relative bg-[#faf9f9]">
       <Container>
         <MenuDesktop />
         <MenuMobile isOpen={mobileOpen} setMobileOpen={setMobileOpen} />

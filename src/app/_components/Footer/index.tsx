@@ -6,15 +6,13 @@ function Footer() {
       <div className="px-16">
         <div className="flex flex-col md:flex-row items-center justify-between">
 
-          <p className="text-3xl tracking-wider font-bold font-bebas mb-6 lg:mb-0">
-            Aurelian Spodarec
+          <p className="text-3xl tracking-wider font-extrabold font-playFair mb-6 lg:mb-0">
+            MidsomerHR
           </p>
 
           <div className="flex flex-col-reverse lg:flex-row md:space-x-8">
             <div className="md:space-x-6 text-center text-sm flex flex-col md:flex-row pt-6 md:pt-0">
               <Link href="/privacy" className="py-1.5">Terms of Service</Link>
-              <Link href="/about" className="py-1.5">About</Link>
-              <Link href="/contact" className="py-1.5">Contact</Link>
             </div>
             <div className="flex space-x-4">
               <a href="https://www.linkedin.com/company/copyai/" >
@@ -23,9 +21,9 @@ function Footer() {
               <a href="https://www.facebook.com/groups/887950931991543/" >
                 <img src="https://cdn.prod.website-files.com/628288c5cd3e8411b90a36a4/656088bf82cf41a39803d531_Frame%20316126177.svg" loading="lazy" alt="" />
               </a>
-              <a href="https://www.twitter.com/copy_ai" >
+              {/* <a href="https://www.twitter.com/copy_ai" >
                 <img src="https://cdn.prod.website-files.com/628288c5cd3e8411b90a36a4/65822605bd3609a56a231a75_x.svg" loading="lazy" alt="" />
-              </a>
+              </a> */}
             </div>
           </div>
 

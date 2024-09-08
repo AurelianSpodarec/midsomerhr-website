@@ -12,48 +12,33 @@ function IconChessKing() {
   )
 }
 
-function IconChessBoard() {
-  return (
-    <svg className="opacity-60 absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
-      <defs>
-        <pattern id="983e3e4c-de6d-4c3f-8d64-b9761d1534cc" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
-          <path d="M.5 200V.5H200" fill="none"></path>
-        </pattern>
-      </defs>
-      <svg x="50%" y="-1" className="overflow-visible fill-gray-800/20">
-        <path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z" stroke-width="0"></path>
-      </svg>
-      <rect width="100%" height="100%" stroke-width="0" fill="url(#983e3e4c-de6d-4c3f-8d64-b9761d1534cc)"></rect>
-    </svg>
-  )
-}
 
 function SectionFooterCTA() {
   return (
-    <Section color="brand" size="lg">
-      <IconChessKing />
-      <IconChessBoard />
+    <Section color="" size="lg" className="">
 
-      <Container className="lg:px-24">
-        <div className="flex lg:gap-32">
-          <div>
-            <div className="mb-6">
-              <h3 className="text-4xl lg:text-5xl mb-4 max-w-md font-bold text-white font-roboto">Lets talk</h3>
-              <p className="text-white text-md lg:text-lg max-w-[480px]">LD</p>
-            </div>
-            <button className="flex items-center lg:mr-4 mx-auto lg:mx-0 align-center space-x-2 py-5 px-7 xs:py-4 lg:px-8 bg-[#1b1b1b] text-[#ebebeb] hover:bg-blue-700 xs:text-lg text-center font-semibold leading-none rounded-2xl transition duration-100">
-              <span>Book a call with Kristina</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.4 0.5L16 6L6.4 11.5V6.95263H0V5.04737H6.4V0.5Z" fill="white" />
-              </svg>
-            </button>
+      <Container className="lg:px-24 my-32 flex align-center justify-center items-center">
+        <div className="text-center relative z-10">
+          <div className="mb-4 bg-white/30 backdrop-blur-sm">
+            <h3 className="text-6xl font-bold font-playFair">Have another question?</h3>
+            {/* <span>Schedule a call to ask!</span> */}
           </div>
-          <Link href="/book-demo" className="hidden lg:block">
-            <img src="/images/panther-no-bg.png" className="absolute right-[108px] w-[440px] bottom-0 z-10 hover:scale-105 cursor-pointer block" />
-          </Link>
+          <button className="hidden lg:inline-flex nav-cta bg-[#913c6d] rounded-lg text-2xl border py-6 px-8 text-white">Schedule a call with Kirstina</button>
         </div>
       </Container>
-    </Section>
+
+      <div className="relative h-full w-full">
+        <img className="absolute w-[300px] bottom-0 rounded-xl" src="/kristina/v1.jpeg" />
+        {/* <img className="absolute w-[200px] bottom-0 right-0 rounded-xl" src="/kristina/v3.jpeg" /> */}
+        <img className="absolute w-[250px] -bottom-32 right-full rounded-xl" src="/kristina/v5.jpeg" alt="Car" />
+        {/* <img className="absolute w-[230px] bottom-0 right-14 rounded-xl" src="/kristina/v8.jpeg" /> */}
+        <img className="absolute w-[210px] -top-[550px] left-20 rounded-xl" src="/kristina/v9.jpeg" alt="Child Carousel"/>
+        {/* <img className="absolute w-[130px] bottom-0 rounded-xl" src="/kristina/v10.jpeg" /> */}
+        {/* <img className="absolute w-[150px] bottom-0 left-1/4 rounded-xl" src="/kristina/v11.jpeg" /> */}
+        {/* <img className="absolute w-[350px] bottom-0 rounded-xl" src="/kristina/v12.jpeg" /> */}
+        <img className="absolute w-[200px] bottom-0 right-1/3 rounded-xl" src="/kristina/v13.jpeg" />
+      </div>
+    </Section >
   )
 }
 

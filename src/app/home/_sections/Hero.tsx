@@ -1,5 +1,6 @@
 import Container from "@/components/_layout/Container";
 import Section from "@/components/_layout/Section";
+import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 function Icon() {
   return (
@@ -74,7 +75,14 @@ function SectionHero() {
               <Icon />
             </div>
 
-            <h1 className="text-8xl font-bold font-playFair leading-[0.85] max-w-screen-md mb-4"><span className="hand-underline">Personalized</span> HR Support for Small Businesses</h1>
+            <h1 className="text-8xl font-bold font-playFair leading-[0.85] max-w-screen-md mb-4">
+              <RoughNotation type="underline" show={true} color="#913c6d" strokeWidth={3} padding={[-20, 20]}>
+                Personalized
+              </RoughNotation>
+              <span className="pl-4">
+                HR Support for Small Businesses
+              </span>
+            </h1>
             <p className="max-w-screen-sm text-lg">Join small business founders who trust MidsomerHR for tailored HR solutions. From bespoke contracts to ongoing support and flexible projects, enjoy hands-on expertise without the faceless consultancy.</p>
             <div className="mt-6 space-x-4">
               <button className="hidden lg:inline-flex nav-cta bg-[#913c6d] rounded-lg border py-3 px-4 text-white">Schedule a Call with Kristina</button>

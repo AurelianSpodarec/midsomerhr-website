@@ -68,7 +68,7 @@ function IconArrow() {
 
 function MenuDesktop() {
   return (
-    <nav className="hidden lg:flex container align-center justify-between flex-wrap p-5 flex-col md:flex-row items-center bg-[#faf9f9]">
+    <nav className="hidden lg:flex container align-center justify-between flex-wrap p-5 flex-col md:flex-row items-center">
       <div className="flex flex-wrap align-center items-center text-base justify-center space-x-6">
         {dataMenu.map((item) => {
           return <NavItem key={item.url} name={item.name} url={item.url} isActive={false} />
