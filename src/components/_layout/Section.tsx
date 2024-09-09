@@ -14,7 +14,7 @@ function Section({ id, className, style, children, color = "default", size = "md
 
   const colors = {
     clean: "",
-    default: "bg-white",
+    default: "bg-[#faf9f9]",
     brand: "bg-[#8f4764]",
   }
 

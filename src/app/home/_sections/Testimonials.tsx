@@ -95,7 +95,8 @@ function SectionTestimonials() {
   return (
     <Section>
       <Container>
-        <header className="flex justify-center items-center text-center mb-20">
+        <header className="flex flex-col justify-center items-center text-center mb-20">
+          <span>What people have to say</span>
           <h2 className="text-6xl font-extrabold font-playFair">Loved by founders</h2>
         </header>
 

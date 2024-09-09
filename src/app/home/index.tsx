@@ -7,6 +7,9 @@ import SectionFAQ from "./_sections/FAQ"
 import SectionTestimonials from "./_sections/Testimonials"
 import SectionProcess from "./_sections/Process"
 import SectionRecentWork from "./_sections/RecentWork"
+import SectionPainPoints from "./_sections/PainPoints"
+import SectionPainPointsSolution from "./_sections/PainPointsSolution"
+import SectionHowItWorks from "./_sections/HowItWorks"
 
 
 function SectionHeader({ kicker, title, desc }) {
@@ -24,8 +27,12 @@ function Home() {
     <div>
 
       <SectionHero />
-      <SectionTestimonials />
+      <SectionPainPoints />
+      <SectionPainPointsSolution />
+      {/* Newsletter about being updated  */}
+      <SectionHowItWorks />
       <SectionPricing />
+      <SectionTestimonials />
       <SectionFAQ />
       <SectionFooterCTA />
 
