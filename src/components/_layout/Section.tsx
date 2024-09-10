@@ -5,7 +5,7 @@ interface ISectionProps extends React.HTMLAttributes<HTMLElement> {
   children?: ReactNode;
   className?: string;
   style?: React.CSSProperties;
-  size?: "clean" | "xs" | "sm" | "md" | "lg";
+  size?: "clean" | "xs" | "sm" | "md" | "lg" | "xl" | "2xl";
   colors?: "default" | "brand";
 }
 
@@ -24,7 +24,8 @@ function Section({ id, className, style, children, color = "default", size = "md
     sm: "py-16",
     md: "py-20",
     lg: "py-24",
-    xl: "py-40"
+    xl: "py-32",
+    "2xl": "py-36",
   };
 
   return (

@@ -96,8 +96,10 @@ function SectionTestimonials() {
     <Section>
       <Container>
         <header className="flex flex-col justify-center items-center text-center mb-20">
-          <span>What people have to say</span>
-          <h2 className="text-6xl font-extrabold font-playFair">Loved by founders</h2>
+          <span>Don’t Take My Word for It!</span>
+          <h2 className="text-6xl font-extrabold font-playFair max-w-5xl">
+            Praised <img src="/gb-flag-heart.png" className="inline-block h-10 -rotate-12 px-1" /> by British Business Owners
+          </h2>
         </header>
 
         <div className="">
