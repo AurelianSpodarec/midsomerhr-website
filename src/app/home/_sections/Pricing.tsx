@@ -203,9 +203,9 @@ function PricingCard({ item }: { item: IPricingItem }) {
       </div>
 
 
-      {item.services.map((service) => {
+      {item.services.map((service, index) => {
         return (
-          <p className="flex items-center mb-2">
+          <p className="flex items-center mb-2" key={index}>
             {/* <span className="text-white fill-white"> */}
             <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-[#aa4780] bg-opacity-20 text-[#aa4780] rounded-full flex-shrink-0">
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" className="w-3 h-3" viewBox="0 0 24 24">
