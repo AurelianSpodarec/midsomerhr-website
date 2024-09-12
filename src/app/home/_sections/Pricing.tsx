@@ -236,8 +236,8 @@ function SectionPricing() {
           <h2 className="font-extrabold font-playFair text-6xl">Simple & transparent pricing</h2>
         </header>
         <div className="grid grid-cols-3 gap-8 max-w-screen-2xl mx-auto">
-          {dataPricing.map((item) => {
-            return <PricingCard item={item} />
+          {dataPricing.map((item, index) => {
+            return <PricingCard item={item} key={index} />
           })}
         </div>
       </Container>
