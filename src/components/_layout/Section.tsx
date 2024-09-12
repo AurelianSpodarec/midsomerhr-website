@@ -22,8 +22,8 @@ function Section({ id, className, style, children, color = "default", size = "md
     clean: "",
     xs: "py-8",
     sm: "py-16",
-    md: "py-20",
-    lg: "py-24",
+    md: "py-24",
+    lg: "py-28",
     xl: "py-32",
     "2xl": "py-36",
   };

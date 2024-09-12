@@ -1,18 +1,12 @@
-'use client'
+import coffee from "./_icons/coffee.json"
+import shield from "./_icons/shield.json"
+import pig from "./_icons/pig.json"
+import timer from "./_icons/timer.json"
+import settings from "./_icons/settings.json"
+import snowflake from "./_icons/snowflake.json"
+import { IItem } from "./IItem"
 
-import Section from "@/components/_layout/Section"
-import Container from "@/components/_layout/Container"
-import { RoughNotation } from "react-rough-notation"
-import Lottie from "lottie-react"
-import test from "./test.json"
-import coffee from "./coffee.json"
-import shield from "./shield.json"
-import pig from "./pig.json"
-import timer from "./timer.json"
-import settings from "./settings.json"
-import snowflake from "./snowflake.json"
-
-const data = [
+export const dataPainPoints: IItem[] = [
   {
     title: "Flexible Contracts",
     desc: "We offer flexible, no-obligation packages. You can scale up or down as your business needs change - no strings attached.",
@@ -60,61 +54,3 @@ const data = [
     // icon: <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="m3.003 4.702 4.22-2.025a1.8 1.8 0 0 1 1.554 0l4.22 2.025a.89.89 0 0 1 .503.8V6a8.55 8.55 0 0 1-3.941 7.201l-.986.631a1.06 1.06 0 0 1-1.146 0l-.986-.63A8.55 8.55 0 0 1 2.5 6v-.498c0-.341.196-.652.503-.8m3.57-3.377L2.354 3.35A2.39 2.39 0 0 0 1 5.502V6a10.05 10.05 0 0 0 4.632 8.465l.986.63a2.56 2.56 0 0 0 2.764 0l.986-.63A10.05 10.05 0 0 0 15 6v-.498c0-.918-.526-1.755-1.354-2.152l-4.22-2.025a3.3 3.3 0 0 0-2.852 0M8.47 9.97a.75.75 0 1 0 1.06 1.06c.575-.574 1.118-1.398 1.516-2.195.386-.772.704-1.653.704-2.335a.75.75 0 0 0-1.5 0c0 .318-.182.937-.546 1.665-.352.703-.809 1.379-1.234 1.805" clip-rule="evenodd"></path></svg>
   }
 ]
-
-function CardPoint({ item }) {
-  return (
-    <div className="border border-dashed border-[#cccccc] p-6 rounded-lg hover:bg-white transition-colors cursor-default duration-250 ease-in-out">
-
-      <div className="w-12 h-12 mb-2 text-slate-700">
-        {item?.icon && (
-          <>
-            {item.icon.v ? (
-              <div style={{ transform: `scale(${item.scale ? item.scale : 1})` }}>
-                <Lottie animationData={item.icon} loop={true} />
-              </div>
-            ) : (
-              typeof item.icon === 'string' || typeof item.icon === 'object' ? (
-                item.icon
-              ) : null
-            )}
-          </>
-        )}
-      </div>
-
-      <h3 className="text-xl font-bold mb-1 font-roboto">{item.title}</h3>
-      <p className="text-[#07111D]">{item.desc}</p>
-    </div>
-  )
-}
-
-function SectionPainPointsSolution() {
-  return (
-    <Section id="process">
-      <Container size="8xl">
-        <header className="flex flex-col text-center justify-center max-w-3xl mx-auto mb-20">
-          <h2 className="font-playFair font-extrabold text-6xl">
-            The Solution:
-            <RoughNotation type="underline" show={true} color="#913c6d" strokeWidth={3} padding={[-13, 20]}>
-              Personalized
-            </RoughNotation>
-            , Hands-On
-            <RoughNotation type="underline" show={true} color="#913c6d" strokeWidth={3} padding={[-13, 20]}>
-              HR Support
-            </RoughNotation>
-          </h2>
-          <p>Tailored HR solutions that connect, support, and drive results. Moving beyond generic advice to provide strategic, proactive support that empowers your business to thrive and grow.</p>
-        </header>
-        <div className="grid grid-cols-3 gap-6">
-          {data.map((item) => {
-            return <CardPoint item={item} />
-          })}
-        </div>
-        <div className="text-center mt-16">
-          <button className="hidden lg:inline-flex nav-cta bg-[#913c6d] rounded-lg border py-3 shadow-xl px-8 font-bold text-white">Show packages</button>
-        </div>
-      </Container>
-    </Section>
-  )
-}
-
-export default SectionPainPointsSolution

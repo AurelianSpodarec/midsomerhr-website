@@ -1,16 +1,16 @@
-import Container from "@/components/_layout/Container"
-import Section from "@/components/_layout/Section"
+
 import SectionPricing from "./_sections/Pricing"
 import SectionHero from "./_sections/Hero"
 import SectionFooterCTA from "./_sections/FooterCTA"
 import SectionFAQ from "./_sections/FAQ"
 import SectionTestimonials from "./_sections/Testimonials"
-import SectionProcess from "./_sections/Process"
-import SectionRecentWork from "./_sections/RecentWork"
 import SectionPainPoints from "./_sections/PainPoints"
-import SectionPainPointsSolution from "./_sections/PainPointsSolution"
 import SectionHowItWorks from "./_sections/HowItWorks"
-
+import SectionPainPointsSolution from "./_sections/PainPointsSolution"
+import CardTestimonial from "./_sections/Testimonials/_components/CardTestimonial"
+import { dataTestimonials } from "./_sections/Testimonials/dataTestimonials"
+import Section from "@/components/_layout/Section"
+import SectionPersonalCTA from "./_sections/PersonalCTA"
 
 function SectionHeader({ kicker, title, desc }) {
   return (
@@ -30,7 +30,12 @@ function Home() {
       <SectionPainPoints />
       <SectionPainPointsSolution />
       {/* Newsletter about being updated  */}
+      <SectionPersonalCTA />
       <SectionHowItWorks />
+
+      <Section color="white">
+        <CardTestimonial item={dataTestimonials[0]} />
+      </Section>
       <SectionPricing />
       <SectionTestimonials />
       <SectionFAQ />

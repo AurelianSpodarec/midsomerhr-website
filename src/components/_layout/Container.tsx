@@ -23,14 +23,14 @@ function Container({ id, style, size, className, children }: IContainerProps) {
     '4xl': 'max-w-4xl',
     '5xl': 'max-w-5xl',
     '6xl': 'max-w-6xl',
-    '7xl': 'max-w-7xl',
+    '7xl': 'max-w-7xl'
   };
 
   return (
     <div
       id={id}
       style={style}
-      className={`container mx-auto px-4 md:px-8 lg:px-16 ${size ? `${options[size]}` : `${options["fluid"]}`} ${className}`}
+      className={`container mx-auto px-4 md:px-8 lg:px-12 ${size ? `${options[size]}` : `${options["fluid"]}`} ${className}`}
     >
       {children}
     </div>

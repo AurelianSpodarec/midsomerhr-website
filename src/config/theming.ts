@@ -182,6 +182,7 @@ export const theming = plugin(
         ...themeConfig.theme.extend,
         fontFamily: {
           playFair: ['var(--font-playFair)'],
+          caveat: ['var(--font-caveat)']
         }
       }
     }

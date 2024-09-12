@@ -15,29 +15,33 @@ function IconChessKing() {
 
 function SectionFooterCTA() {
   return (
-    <Section color="" size="lg" className="">
+    <Section size="xs">
 
-      <Container className="lg:px-24 my-32 flex align-center justify-center items-center">
+      <Container className="lg:px-24 mb-32 flex align-center justify-center items-center">
         <div className="text-center relative z-10">
-          <div className="mb-4 bg-white/30 backdrop-blur-sm">
+          <div className="mb-8 bg-white/30 backdrop-blur-sm">
             <h3 className="text-6xl font-bold font-playFair">Have another question?</h3>
-            {/* <span>Schedule a call to ask!</span> */}
+            <span className="text-6xl font-bold font-playFair">Schedule a call to ask!</span>
           </div>
-          <button className="hidden lg:inline-flex nav-cta bg-[#913c6d] rounded-lg text-2xl border py-6 px-8 text-white">Schedule a call with Kirstina</button>
+          <button className="inline-flex bg-[#913c6d] rounded-3xl text-3xl border py-6 px-48 text-white space-x-4 w-full align-center items-center">
+            <img src="/kristina/v3.jpeg" className="w-20 h-20 rounded-3xl object-cover" />
+            <span>Schedule a call with Kirstina</span>
+          </button>
+          <Link href="" className="underline decoration-dotted hover:decoration-solid mt-2 font-semibold">or send an email →</Link>
         </div>
       </Container>
 
-      <div className="relative h-full w-full">
-        <img className="absolute w-[300px] bottom-0 rounded-xl" src="/kristina/v1.jpeg" />
-        {/* <img className="absolute w-[200px] bottom-0 right-0 rounded-xl" src="/kristina/v3.jpeg" /> */}
-        <img className="absolute w-[250px] -bottom-32 right-full rounded-xl" src="/kristina/v5.jpeg" alt="Car" />
-        {/* <img className="absolute w-[230px] bottom-0 right-14 rounded-xl" src="/kristina/v8.jpeg" /> */}
-        <img className="absolute w-[210px] -top-[550px] left-20 rounded-xl" src="/kristina/v9.jpeg" alt="Child Carousel"/>
-        {/* <img className="absolute w-[130px] bottom-0 rounded-xl" src="/kristina/v10.jpeg" /> */}
-        {/* <img className="absolute w-[150px] bottom-0 left-1/4 rounded-xl" src="/kristina/v11.jpeg" /> */}
-        {/* <img className="absolute w-[350px] bottom-0 rounded-xl" src="/kristina/v12.jpeg" /> */}
-        <img className="absolute w-[200px] bottom-0 right-1/3 rounded-xl" src="/kristina/v13.jpeg" />
-      </div>
+      {/* <div className="relative h-full w-full"> */}
+      {/* <img className="absolute w-[300px] bottom-0 rounded-xl" src="/kristina/v1.jpeg" /> */}
+      {/* <img className="absolute w-[200px] bottom-0 right-0 rounded-xl" src="/kristina/v3.jpeg" /> */}
+      {/* <img className="absolute w-[250px] -bottom-32 right-full rounded-xl" src="/kristina/v5.jpeg" alt="Car" /> */}
+      {/* <img className="absolute w-[230px] bottom-0 right-14 rounded-xl" src="/kristina/v8.jpeg" /> */}
+      {/* <img className="absolute w-[210px] -top-[550px] left-20 rounded-xl" src="/kristina/v9.jpeg" alt="Child Carousel"/> */}
+      {/* <img className="absolute w-[130px] bottom-0 rounded-xl" src="/kristina/v10.jpeg" /> */}
+      {/* <img className="absolute w-[150px] bottom-0 left-1/4 rounded-xl" src="/kristina/v11.jpeg" /> */}
+      {/* <img className="absolute w-[350px] bottom-0 rounded-xl" src="/kristina/v12.jpeg" /> */}
+      {/* <img className="absolute w-[200px] bottom-0 right-1/3 rounded-xl" src="/kristina/v13.jpeg" /> */}
+      {/* </div> */}
     </Section >
   )
 }

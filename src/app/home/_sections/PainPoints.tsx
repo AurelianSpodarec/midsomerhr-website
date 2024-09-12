@@ -1,7 +1,22 @@
+'use client'
+
+import React from "react"
 import Section from "@/components/_layout/Section"
 import Container from "@/components/_layout/Container"
 
-const dataPainPoints = [
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+
+import Autoplay from "embla-carousel-autoplay"
+import { RoughNotation } from "react-rough-notation"
+
+
+const data = [
   {
     title: "Locked into Long-Term Contracts",
     desc: "Large companies tie you into contracts that are difficult to escape, leaving you stuck with overpriced services you may no longer need.",
@@ -18,15 +33,24 @@ const dataPainPoints = [
   {
     title: "Risk-Averse, Generic Advice",
     desc: "You get one-size-fits-all advice that’s more about covering the HR firm's back than offering proactive, tailored solutions."
+  },
+
+  {
+    title: "Risk-Averse, Generic Advice",
+    desc: "You get one-size-fits-all advice that’s more about covering the HR firm's back than offering proactive, tailored solutions."
+  },
+  {
+    title: "Risk-Averse, Generic Advice",
+    desc: "You get one-size-fits-all advice that’s more about covering the HR firm's back than offering proactive, tailored solutions."
   }
 ]
 
 function CardPoint({ item }) {
   return (
-    <div className="border border-black p-6 rounded-lg bg-[#262525]">
+    <div className="border border-black p-6 rounded-lg mx-2 bg-[#262525] h-full">
       <div className="h-12 w-12 mb-4">
         {/* {item.icon} */}
-        <div className="border rounded-full h-8 w-8 flex items-center align-center justify-center">
+        <div className="border-2 border-gray-500 rounded-full h-7 w-7 flex items-center align-center justify-center">
           <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </div>
       </div>
@@ -38,18 +62,38 @@ function CardPoint({ item }) {
 
 // #292d32
 function SectionPainPoints() {
+
+
   return (
     <Section id="process" color="clean" size="xl" className="bg-[#2e2e2e] text-white">
-      <Container>
-        <header className="flex flex-col text-center justify-center mb-20 max-w-3xl mx-auto">
-          <h2 className="font-playFair font-extrabold text-6xl">The Problem with <br /> Big HR Firms</h2>
+      <Container size="clear" className="max-w-full px-0 mx-0">
+        <header className="flex flex-col text-center justify-center mb-20 max-w-lg mx-auto">
+          <h2 className="font-playFair font-extrabold text-6xl mb-2">
+            The <RoughNotation type="underline" show={true} color="#913c6d" strokeWidth={3} padding={[-13, 20]}>Problem</RoughNotation> with <RoughNotation type="underline" show={true} color="#913c6d" strokeWidth={3} padding={[-13, 20]}>Big HR</RoughNotation> Firms
+          </h2>
           <p>Running a small business is already a challenge - dealing with big HR firms shouldn’t add to it. </p>
         </header>
-        <div className="grid grid-cols-4 gap-6">
-          {dataPainPoints.map((item) => {
-            return <CardPoint item={item} />
-          })}
-        </div>
+
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true
+          }}
+          plugins={[
+            Autoplay({
+              delay: 5000,
+            }),
+          ]}
+          className="w-full">
+          <CarouselContent className="-ml-1">
+            {data.map((item, index) => (
+              <CarouselItem key={index} className="pl-1 md:basis-1/3 lg:basis-1/4 min-h-[250px]">
+                <CardPoint item={item} />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+
       </Container>
     </Section>
   )

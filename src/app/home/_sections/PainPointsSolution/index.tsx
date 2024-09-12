@@ -1,0 +1,64 @@
+'use client'
+
+import Lottie from "lottie-react"
+import { RoughNotation } from "react-rough-notation"
+
+import Section from "@/components/_layout/Section"
+import Container from "@/components/_layout/Container"
+
+import { dataPainPoints } from "./data"
+import { IItem } from "./IItem"
+
+function CardPoint({ item }: { item: IItem }) {
+  return (
+    <div className="border border-dashed border-[#cccccc] p-6 rounded-lg hover:bg-white transition-colors cursor-default duration-250 ease-in-out">
+
+      <div className="w-12 h-12 mb-2 text-slate-700">
+        {item?.icon && (
+          <>
+            {item?.icon?.v ? (
+              <div style={{ transform: `scale(${item.scale ? item.scale : 1})` }}>
+                <Lottie animationData={item.icon} loop={true} />
+              </div>
+            ) : (
+              typeof item.icon === 'string' || typeof item.icon === 'object' ? (
+                item.icon
+              ) : null
+            )}
+          </>
+        )}
+      </div>
+
+      <h3 className="text-xl font-bold mb-1 font-roboto">{item.title}</h3>
+      <p className="text-[#07111D]">{item?.desc}</p>
+    </div>
+  )
+}
+
+function SectionPainPointsSolution() {
+  return (
+    <Section id="process">
+      <Container size="8xl">
+        
+        <header className="flex flex-col text-center justify-center max-w-3xl mx-auto mb-20">
+          <h2 className="font-playFair font-extrabold text-6xl">
+            The Solution: <RoughNotation type="underline" show={true} color="#913c6d" strokeWidth={3} padding={[-13, 20]}>Personalized</RoughNotation>, Hands-On <RoughNotation type="underline" show={true} color="#913c6d" strokeWidth={3} padding={[-13, 20]}>HR Support</RoughNotation>
+          </h2>
+          <p>Tailored HR solutions that connect, support, and drive results. Moving beyond generic advice to provide strategic, proactive support that empowers your business to thrive and grow.</p>
+        </header>
+
+        <div className="grid grid-cols-3 gap-6">
+          {dataPainPoints.map((item) => {
+            return <CardPoint item={item} />
+          })}
+        </div>
+
+        {/* <div className="text-center mt-16">
+          <button className="hidden lg:inline-flex nav-cta bg-[#913c6d] rounded-lg border py-3 shadow-xl px-8 font-bold text-white">Show packages</button>
+        </div> */}
+      </Container>
+    </Section>
+  )
+}
+
+export default SectionPainPointsSolution

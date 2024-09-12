@@ -64,7 +64,7 @@ const dataPricing = [
     ]
   },
   {
-    highlight: false,
+    highlight: true,
     name: "HR Monthly Support",
     description: "Perfect for businesses seeking ongoing HR support to manage and grow their teams effectively.",
     price: 199,
@@ -152,14 +152,14 @@ const dataPricing = [
 function PricingCard({ item }) {
   return (
 
-    <div className="h-full p-6 rounded-lg border-2 border-[#ededed] bg-[#f1f1f1] flex flex-col relative overflow-hidden">
+    <div className={`h-full p-6 rounded-lg bg-[#f1f1f1] border-2 ${item.highlight ? "border-[#959595] scale-[1.05]" : "border-[#ededed]"}  flex flex-col relative`}>
 
       <div className="mb-4">
         <div className="flex items-center justify-between align-center">
           <h2 className="text-2xl tracking-widest title-font mb-1 font-bold">{item.name}</h2>
           {item.highlight &&
-            <div className="bg-[gold] py-2 px-5 rounded-2xl text-black">
-              Best Value
+            <div className="absolute right-[-13px] rotate-12 text-sm top-[0px] bg-[#1b263d]  py-1.5 px-4 rounded-2xl text-white">
+              Most Popular
             </div>
           }
         </div>
@@ -178,23 +178,29 @@ function PricingCard({ item }) {
         <p className="text-xs text-gray-500 mb-4">Contact us for a tailored quote</p>
       </div>
 
-      <button className="text-white font-bold py-4 px-6 bg-[#913c6d] rounded-xl mb-6">
-        Schedule a Free Consultation
-      </button>
-      <button>
-        or send an email
-      </button>
+      <div className="flex flex-col mb-6">
+        <button className={`font-bold py-4 px-6 ${item.highlight ? "bg-[#913c6d] text-white " : "border-2 border-[#3b3b3b] text-[#3b3b3b]"}  rounded-xl mb-2`}>
+          Schedule a Free Consultation
+        </button>
+        <button className="underline decoration-dotted hover:decoration-solid font-semibold">
+          or send an email →
+        </button>
+      </div>
 
 
       {item.services.map((service) => {
         return (
-          <p className="flex items-center text-gray-600 mb-2">
-            <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
+          <p className="flex items-center mb-2">
+            {/* <span className="text-white fill-white"> */}
+            <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-[#aa4780] bg-opacity-20 text-[#aa4780] rounded-full flex-shrink-0">
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                 <path d="M20 6L9 17l-5-5"></path>
               </svg>
+              {/* ✔ */}
             </span>
-            {service.name}
+            <span className="text-[#12141d]">
+              {service.name}
+            </span>
           </p>
         )
       })}
@@ -208,12 +214,13 @@ function PricingCard({ item }) {
 function SectionPricing() {
   return (
     <Section id="pricing" className="bg-[#faf9f9]">
-      <Container size="8xl">
+      <Container size="clean">
+
         <header className="flex flex-col justify-center items-center text-center mb-20">
-          <span>Pricing</span>
+          <span className="font-caveat text-lg">Affordable expertise, tailored for your business</span>
           <h2 className="font-extrabold font-playFair text-6xl">Simple & transparent pricing</h2>
         </header>
-        <div className="grid grid-cols-3 gap-4 max-w-screen-xl mx-auto">
+        <div className="grid grid-cols-3 gap-8 max-w-screen-2xl mx-auto">
           {dataPricing.map((item) => {
             return <PricingCard item={item} />
           })}
