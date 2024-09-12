@@ -1,8 +1,4 @@
-import Container from "@/components/_layout/Container"
-import Section from "@/components/_layout/Section"
-import AccordionBasic from "@/components/molecules/Accordion"
-
-const dataObjections = [
+export const dataObjections = [
   {
     "question": "Who’s is behind MidsomerHR?",
     "answer": "MidsomerHR is led by a dedicated consultant (me! Kristina) who genuinely cares about your business’s success. With years of valuable corporate HR experience at companies like M&G plc, Royal London, New Look, Mitie Facilities Management, and Lloyds Banking Group, I offer personalized HR solutions tailored to your specific needs - no call centers, no faceless consultants, just hands-on support :)"
@@ -28,19 +24,3 @@ const dataObjections = [
     "answer": "The timeline depends on your specific needs, but many clients start seeing improvements within a few weeks of implementing the recommended changes. Whether it’s a new contract or a project, I’ll ensure you’re on track for success as quickly as possible."
   }
 ]
-
-function SectionFAQ() {
-  return (
-    <Section>
-      <Container size="4xl">
-        <header className="text-center">
-          <span className="text-2xl">FAQ</span>
-          <h2 className="font-extrabold text-6xl font-playFair">Questions? Answers.</h2>
-        </header>
-        <AccordionBasic type="single" data={dataObjections} />
-      </Container>
-    </Section>
-  )
-}
-
-export default SectionFAQ

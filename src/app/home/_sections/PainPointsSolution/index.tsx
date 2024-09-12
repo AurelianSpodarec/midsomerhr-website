@@ -16,6 +16,7 @@ function CardPoint({ item }: { item: IItem }) {
       <div className="w-12 h-12 mb-2 text-slate-700">
         {item?.icon && (
           <>
+            {/* @ts-ignore */}
             {item?.icon?.v ? (
               <div style={{ transform: `scale(${item.scale ? item.scale : 1})` }}>
                 <Lottie animationData={item.icon} loop={true} />
@@ -30,6 +31,7 @@ function CardPoint({ item }: { item: IItem }) {
       </div>
 
       <h3 className="text-xl font-bold mb-1 font-roboto">{item.title}</h3>
+      {/* @ts-ignore */}
       <p className="text-[#07111D]">{item?.desc}</p>
     </div>
   )
@@ -39,7 +41,7 @@ function SectionPainPointsSolution() {
   return (
     <Section id="process">
       <Container size="8xl">
-        
+
         <header className="flex flex-col text-center justify-center max-w-3xl mx-auto mb-20">
           <h2 className="font-playFair font-extrabold text-6xl">
             The Solution: <RoughNotation type="underline" show={true} color="#913c6d" strokeWidth={3} padding={[-13, 20]}>Personalized</RoughNotation>, Hands-On <RoughNotation type="underline" show={true} color="#913c6d" strokeWidth={3} padding={[-13, 20]}>HR Support</RoughNotation>

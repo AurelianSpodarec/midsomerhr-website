@@ -22,9 +22,9 @@ function CardTestimonial({ item: { name, title, image, quote, company } }: { ite
               <div className="font-semibold text-gray-900 text-lg">Judith Black</div>
               <p>{title}
                 <span> at </span>
-                <Link href={company?.link?.url} target="blank" className="font-semibold">
+                <span className="font-semibold">
                   {company?.link?.name}
-                </Link>
+                </span>
               </p>
             </div>
           </div>

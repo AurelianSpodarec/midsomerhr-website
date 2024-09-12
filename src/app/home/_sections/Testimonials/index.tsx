@@ -7,7 +7,7 @@ import CardTestimonial from "./_components/CardTestimonial";
 
 function SectionTestimonials() {
   return (
-    <Section>
+    <Section size="sm">
       <Container>
         <header className="flex flex-col justify-center items-center text-center mb-20">
           <span className="font-caveat text-lg">

@@ -15,10 +15,32 @@ function IconChessKing() {
 
 function SectionFooterCTA() {
   return (
-    <Section size="xs">
+    <Section size="xl" color="clear" className="bg-[#1c1d1f]">
 
-      <Container className="lg:px-24 mb-32 flex align-center justify-center items-center">
-        <div className="text-center relative z-10">
+      <Container className="lg:px-24">
+        <div className="flex lg:gap-32">
+          <div>
+            <div className="mb-6 text-white">
+              {/* <h3 className="text-4xl lg:text-5xl mb-4 max-w-md font-bold text-white font-roboto">Have another question?</h3> */}
+              {/* <p className="text-white text-md lg:text-lg max-w-[480px]">Get a demo to see how top teams use SalesPlayX.ai to automate research and supercharge prospecting efficiency.</p> */}
+              <h3 className="text-6xl font-bold font-playFair">Have another question?</h3>
+              <span className="text-6xl font-bold font-playFair">Schedule a call to ask!</span>
+            </div>
+            <button className="flex items-center lg:mr-4 mx-auto lg:mx-0 align-center space-x-2 py-5 px-7 xs:py-4 lg:px-8 bg-[#913c6d] text-white hover:bg-blue-700 xs:text-lg text-center font-semibold leading-none rounded-2xl transition duration-100">
+              <img src="/kristina/v3.jpeg" className="w-8 h-8 rounded-2xl object-cover" />
+              <span>Schedule a call with Kristina</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.4 0.5L16 6L6.4 11.5V6.95263H0V5.04737H6.4V0.5Z" fill="white" />
+              </svg>
+            </button>
+          </div>
+          <Link href="/book-demo" className="hidden lg:block">
+            <img src="/kristina/v3.jpeg" className="absolute right-[108px] w-[300px] rounded-lg -rotate-3 border-[8px] border-white shadow bottom-[20px] z-10 hover:scale-105 cursor-pointer block" />
+          </Link>
+        </div>
+      </Container>
+      {/* <Container className="lg:px-24 mb-32 flex align-center justify-center items-center"> */}
+      {/* <div className="text-center relative z-10">
           <div className="mb-8 bg-white/30 backdrop-blur-sm">
             <h3 className="text-6xl font-bold font-playFair">Have another question?</h3>
             <span className="text-6xl font-bold font-playFair">Schedule a call to ask!</span>
@@ -28,8 +50,8 @@ function SectionFooterCTA() {
             <span>Schedule a call with Kirstina</span>
           </button>
           <Link href="" className="underline decoration-dotted hover:decoration-solid mt-2 font-semibold">or send an email →</Link>
-        </div>
-      </Container>
+        </div> */}
+      {/* </Container> */}
 
       {/* <div className="relative h-full w-full"> */}
       {/* <img className="absolute w-[300px] bottom-0 rounded-xl" src="/kristina/v1.jpeg" /> */}

@@ -1,7 +1,22 @@
 import Container from "@/components/_layout/Container";
 import Section from "@/components/_layout/Section";
 
-const dataPricing = [
+interface IServiceItem {
+  name: string;
+  highlighted: boolean;
+}
+
+interface IPricingItem {
+  highlight: boolean;
+  name: string;
+  description: string;
+  price: number;
+  priceOption?: "m"
+  subtitle: string;
+  services: IServiceItem[];
+}
+
+const dataPricing: IPricingItem[] = [
   {
     "highlight": false,
     "name": "HR Pay-As-You-Go",
@@ -149,7 +164,7 @@ const dataPricing = [
 ];
 
 
-function PricingCard({ item }) {
+function PricingCard({ item }: { item: IPricingItem }) {
   return (
 
     <div className={`h-full p-6 rounded-lg bg-[#f1f1f1] border-2 ${item.highlight ? "border-[#959595] scale-[1.05]" : "border-[#ededed]"}  flex flex-col relative`}>
