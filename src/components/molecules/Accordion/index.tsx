@@ -5,13 +5,14 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 
-
+// @ts-ignore
 function AccordionBasic({ type, data }) {
   return (
     <Accordion type={type}>
-      {data.map((item) => {
+      {/* @ts-ignore */}
+      {data.map((item, index) => {
         return (
-          <AccordionItem value={item.question}>
+          <AccordionItem value={item.question} key={index}>
             <AccordionTrigger>{item.question}</AccordionTrigger>
             <AccordionContent>{item.answer}</AccordionContent>
           </AccordionItem>

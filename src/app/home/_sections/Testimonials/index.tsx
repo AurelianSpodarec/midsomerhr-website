@@ -18,9 +18,9 @@ function SectionTestimonials() {
           </h2>
         </header>
         <div>
-          {dataTestimonials.map((testimonial => {
-            return <CardTestimonial item={testimonial} />
-          }))}
+          {dataTestimonials.map((testimonial, index) => {
+            return <CardTestimonial item={testimonial} key={index} />
+          })}
         </div>
       </Container>
     </Section>

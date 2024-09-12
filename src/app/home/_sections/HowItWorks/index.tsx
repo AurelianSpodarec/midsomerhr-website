@@ -19,8 +19,8 @@ function SectionHowItWorks() {
         </header>
 
         <div className="grid grid-cols-3 gap-6">
-          {dataHowItWorks.map((item) => {
-            return <CardPoint item={item} />
+          {dataHowItWorks.map((item, index) => {
+            return <CardPoint item={item} key={index} />
           })}
         </div>
 

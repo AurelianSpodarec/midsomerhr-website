@@ -50,8 +50,8 @@ function SectionPainPointsSolution() {
         </header>
 
         <div className="grid grid-cols-3 gap-6">
-          {dataPainPoints.map((item) => {
-            return <CardPoint item={item} />
+          {dataPainPoints.map((item, index) => {
+            return <CardPoint item={item} key={index} />
           })}
         </div>
 
