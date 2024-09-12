@@ -18,9 +18,9 @@ function SectionHowItWorks() {
           </h2>
         </header>
 
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-3 gap-10 py-12">
           {dataHowItWorks.map((item, index) => {
-            return <CardPoint item={item} key={index} />
+            return <CardPoint item={item} key={index} index={index} />
           })}
         </div>
 

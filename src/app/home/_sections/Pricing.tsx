@@ -167,7 +167,7 @@ const dataPricing: IPricingItem[] = [
 function PricingCard({ item }: { item: IPricingItem }) {
   return (
 
-    <div className={`h-full p-6 rounded-lg bg-[#f1f1f1] border-2 ${item.highlight ? "border-[#959595] scale-[1.05]" : "border-[#ededed]"}  flex flex-col relative`}>
+    <div className={`h-full p-6 rounded-lg bg-[#f1f1f1] border-2 ${item.highlight ? "border-[#913c6d] scale-[1.05]" : "border-[#ededed]"}  flex flex-col relative`}>
 
       <div className="mb-4">
         <div className="flex items-center justify-between align-center">
