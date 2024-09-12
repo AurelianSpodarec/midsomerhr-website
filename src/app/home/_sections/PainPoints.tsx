@@ -35,14 +35,14 @@ const data = [
     desc: "You get one-size-fits-all advice that’s more about covering the HR firm's back than offering proactive, tailored solutions."
   },
 
-  {
-    title: "Risk-Averse, Generic Advice",
-    desc: "You get one-size-fits-all advice that’s more about covering the HR firm's back than offering proactive, tailored solutions."
-  },
-  {
-    title: "Risk-Averse, Generic Advice",
-    desc: "You get one-size-fits-all advice that’s more about covering the HR firm's back than offering proactive, tailored solutions."
-  }
+  // {
+  //   title: "Risk-Averse, Generic Advice",
+  //   desc: "You get one-size-fits-all advice that’s more about covering the HR firm's back than offering proactive, tailored solutions."
+  // },
+  // {
+  //   title: "Risk-Averse, Generic Advice",
+  //   desc: "You get one-size-fits-all advice that’s more about covering the HR firm's back than offering proactive, tailored solutions."
+  // }
 ]
 
 function CardPoint({ item }) {
