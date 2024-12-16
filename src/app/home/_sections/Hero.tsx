@@ -83,7 +83,7 @@ function SectionHero() {
                 HR Support for Small Businesses
               </span>
             </h1>
-            <p className="max-w-screen-sm text-lg">Join small business founders who trust MidsomerHR for tailored HR solutions. From bespoke contracts to ongoing support and flexible projects, enjoy hands-on expertise without the faceless consultancy.</p>
+            <p className="max-w-screen-sm text-lg">I don’t just do HR. I partner with business founders and leaders to create bespoke HR solutions and help you grow your business through your people.</p>
             <div className="mt-6 space-x-4">
               <button className="hidden lg:inline-flex nav-cta bg-[#913c6d] rounded-lg border py-3 px-4 text-white">Schedule a Call with Kristina</button>
               <button className="px-4 py-3 border border-transparent hover:border-black rounded-lg">Learn more</button>

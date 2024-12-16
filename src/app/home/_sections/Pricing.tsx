@@ -21,7 +21,7 @@ const dataPricing: IPricingItem[] = [
     "highlight": false,
     "name": "HR Pay-As-You-Go",
     "description": "Ideal for businesses needing expert help with one-off HR projects or flexible support.",
-    "price": 97,
+    "price": 99,
     "subtitle": "Starting at: £97",
     "services": [
       {
@@ -79,7 +79,7 @@ const dataPricing: IPricingItem[] = [
     ]
   },
   {
-    highlight: true,
+    highlight: false,
     name: "HR Monthly Support",
     description: "Perfect for businesses seeking ongoing HR support to manage and grow their teams effectively.",
     price: 199,
@@ -132,7 +132,7 @@ const dataPricing: IPricingItem[] = [
     highlight: false,
     name: "HR Consulting Package",
     description: "Perfect for new businesses or those aiming to refine and enhance their HR systems.",
-    price: 597,
+    price: 599,
     subtitle: "Starting at: £597",
     services: [
       {
